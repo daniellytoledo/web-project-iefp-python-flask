@@ -1,0 +1,7 @@
+cmd do windows
+cd \wamp64\www\web-project-iefp-python-flask\web-project-iefp-python-flask
+.venv\Scripts\activate
+
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 816-830-902
