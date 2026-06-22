@@ -13,17 +13,3 @@ def conectar_pymysql():
         autocommit=False,
         cursorclass=pymysql.cursors.DictCursor
     )
-
-sql = "SELECT * FROM cidades"
-conexao = conectar_pymysql()
-
-try:
-    cursor = conexao.cursor()
-    cursor.execute(sql)
-    resultado = cursor.fetchall()
-
-    print(resultado)
-
-finally:
-    cursor.close()
-    conexao.close()

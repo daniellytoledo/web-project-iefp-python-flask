@@ -6,9 +6,9 @@ def criar_app():
     app.config['SECRET_KEY'] = os.environ.get('SK', 'dev-inseguro')
 
 # importar blueprints
-# from app.routes.rt_cidades import cidades
+    from app.routes.rt_cidades import cidades
 
 # registrar bluebrints
-# app.register_blueprint(cidades)
+    app.register_blueprint(cidades)
 
     return app

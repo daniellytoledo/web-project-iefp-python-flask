@@ -1,5 +1,5 @@
 from app.bd_config import conectar_pymysql
-# from pprint import pprint
+from pprint import pprint
 
 def select_todas_cidades():
     conexao = conectar_pymysql()
@@ -11,5 +11,5 @@ def select_todas_cidades():
 
     return(resultado)
 
-# if __name__ == "__main__":
-#   pprint(select_todas_cidades())
+if __name__ == "__main__":
+    pprint(select_todas_cidades())
