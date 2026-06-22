@@ -34,12 +34,13 @@
 body{
     margin:0;
     padding:0;
-    background-image: url("imgs/fundos/city01.jpg");
+    background-image: url("../img/benagil.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;  /* scroll ou fixed */
     font-family: calibri;
 }
+
 header, footer{
     padding:6px;
     text-align:center;

@@ -1,18 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="pt">
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Anedotas{% endblock %}</title>
+        <title>{% block title %}Ttitulo janota{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="{{ url_for('static', filename='js/uteis.js') }}"></script>
 	</head>
 	<body>
         <header>
     <div class="cxFlex80">
-        <img src="imgs/logo.png" alt="Logótipo" id="imgLogo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logótipo" id="logo">
         <p id="slogan">Projeto Camalheia :: viaje pelo mundo ficando alojado na... cama alheia</p>
 
         <!-- Aqui entrará o form de login -->

@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Camalheia{% endblock %}
+{% block title %}Cidades Flask{% endblock %}
 
 {% block content %}
 <h1> Estou aqui</h1>
+<br><br>
 {% for cidade in lista_cidades %}
     <p>{{cidade.nome_c}}</p>
 {% endfor %}
