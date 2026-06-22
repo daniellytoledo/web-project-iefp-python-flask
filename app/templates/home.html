@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block title %}Camalheia{% endblock %}
+
+{% block content %}
+<h1> Estou aqui</h1>
+{% for cidade in lista_cidades %}
+    <p>{{cidade.nome_c}}</p>
+{% endfor %}
+{% endblock %}
+
