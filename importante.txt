@@ -3,3 +3,5 @@ cmd do windows
 cd \wamp64\www\web-project-iefp-python-flask\web-project-iefp-python-flask
 
 .venv\Scripts\activate
+
+python run.py

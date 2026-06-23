@@ -1,48 +1,63 @@
+
+
 <!DOCTYPE html>
 <html lang="pt">
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Ttitulo janota{% endblock %}</title>
+        <title>{% block title %}Titulo janota{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="{{ url_for('static', filename='js/uteis.js') }}"></script>
 	</head>
 	<body>
         <header>
-    <div class="cxFlex80">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logótipo" id="logo">
-        <p id="slogan">Projeto Camalheia :: viaje pelo mundo ficando alojado na... cama alheia</p>
+            <div class="cxFlex80">
+                <img src="static/img/logo.png" alt="Logótipo" id="imgLogo">
+                <p id="slogan">Projeto Camalheia :: viaje pelo mundo ficando alojado na... cama alheia</p>
 
-        <!-- Aqui entrará o form de login -->
-    </div>
-</header>
-
-        <section id="cxsite">
-            <nav>
-                <a href="index.php">home</a>
-                <a href="inserir.php">adicionar</a>
-                <a href="atualizar1.php">atualizar</a>
-                <a href="eliminar.php">eliminar</a>
-                <form action="res_pesquisa.php" method="POST">
-                    <input type="text" name="fpesq" required>
-                    <input type="submit" value="Pesquisar" class="perSubmits2">
+                <form action="" name="formLogin" id="id_formLogin" method="POST" enctype="application/x-www-form-urlencoded">
+                    <div id="agrupaInputs">
+                        <input type="text" name="fuser" placeholder="user" class="input-login" required>
+                        <input type="password" name="fpass" placeholder="password" class="input-login" required>
+                    </div>
+                    <input type="submit" value="entrar">
                 </form>
-            </nav>
-            <br><br>
-            <p class="intro">Um homem precisa viajar. Por sua conta, não por meio de histórias, imagens, livros ou TV. Precisa viajar por si, com seus olhos e pés, para entender o que é seu. Para um dia plantar as suas próprias árvores e dar-lhes valor. Conhecer o frio para desfrutar o calor. E o oposto. Sentir a distância e o desabrigo para estar bem sob o próprio teto. <br>
-            Um homem precisa viajar para lugares que não conhece para quebrar essa arrogância que nos faz ver o mundo como o imaginamos, e não simplesmente como é ou pode ser. Que nos faz professores e doutores do que não vimos, quando deveríamos ser alunos, e simplesmente ir ver.</p>
+            </div>
+        </header>
 
+        <main>
+            <div id="barraPesquisa">
+                <nav>
+                    <a href="index.php">Home</a>
+                    <a href="adicionar.php">Adicionar</a>
+                    <a href="atualizar.php">Atualizar</a>
+                    <a href="eliminar.php">Eliminar</a>
+                    <a href="ad_fotos.php">Fotos</a>
+                </nav>
+
+                <form name="formPesquisa" action="pesquisa.php" method="GET" enctype="application/x-www-form-urlencoded" action="">
+                    <input type="text" name="fpesquisa" class="input-pesquisa">
+                    <input type="submit" value="pesquisa">
+                </form>
+            </div>
             
-            <div class="cxFlex">
+            <p id="p_01">
+                Um homem precisa viajar. Por sua conta, não por meio de histórias, imagens, livros ou TV. Precisa viajar por si, com seus olhos e pés, para entender o que é seu. Para um dia plantar as suas próprias árvores e dar-lhes valor. Conhecer o frio para desfrutar o calor. E o oposto. Sentir a distância e o desabrigo para estar bem sob o próprio teto.
+                Um homem precisa viajar para lugares que não conhece para quebrar essa arrogância que nos faz ver o mundo como o imaginamos, e não simplesmente como é ou pode ser. Que nos faz professores e doutores do que não vimos, quando deveríamos ser alunos, e simplesmente ir ver.
+            </p>
+            <p id="p_autor_01">Amyr Klink</p>
+            <p id="p_titulo_01">Cidades aderentes:</p>
+            
+            <div class="cxFlex100">
                 {% block content %}
                 <!-- <p class="tit1"> Cidades aderentes </p>
                 <p class="signature">Amyr Klink</p> -->
                 
                 {% endblock %}
             </div>
-        </section> <!-- fim da cxsite -->
+        </main> <!-- fim da cxsite -->
         <footer>
-            <p>O Projeto Camalheia é exclusivamente patrocinado por Durex Lda, Harmony SA e Control Lda</p>
+            <p>danielly toledo - IEFP projeto :: python backend</p>
         </footer>
 	</body>
 </html>
