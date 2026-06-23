@@ -11,5 +11,15 @@ def select_todas_cidades():
 
     return(resultado)
 
+def select_cidade(cidade_id):
+    conexao = conectar_pymysql()
+    cursor = conexao.cursor()
+
+    sql = "SELECT * FROM cidades WHERE id_c = %s"
+    cursor.execute(sql, (cidade_id))
+    resultado = cursor.fetchone()
+
+    return(resultado)
+
 if __name__ == "__main__":
-    pprint(select_todas_cidades())
+    pprint(select_cidade(1)) # teste pra ver se está funcionando, escolhendo uma id de cidades

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}  Camalheia - {{dados.nome_c}}  {% endblock %}
+
+{% block intro %}
+    <p id="p_titulo_01">{{dados.nome_c}}</p>  
+{% endblock}
+
+{% block content %}
+<br><div>
+    <p>
+        <strong>País:</strong> 
+        {{ dados.pais_c }}
+    </p>
+    <p>
+        <strong>Habitantes:</strong> 
+        {{ dados.habitantes_c }}
+    </p>
+    <p>
+        <strong>Fundação:</strong> 
+        {{ dados.dataf_c }}
+    </p>
+    <p>
+        {{ dados.desc_c }}
+    </p>
+</div>
+{% endblock %}

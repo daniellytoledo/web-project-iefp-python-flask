@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt">
 	<head>
@@ -12,7 +10,7 @@
 	<body>
         <header>
             <div class="cxFlex80">
-                <img src="static/img/logo.png" alt="Logótipo" id="imgLogo">
+                <img src="{{ url_for('static', filename='img/logo.png')}}" alt="Logótipo" id="imgLogo">
                 <p id="slogan">Projeto Camalheia :: viaje pelo mundo ficando alojado na... cama alheia</p>
 
                 <form action="" name="formLogin" id="id_formLogin" method="POST" enctype="application/x-www-form-urlencoded">
@@ -28,11 +26,11 @@
         <main>
             <div id="barraPesquisa">
                 <nav>
-                    <a href="{{url_for('cidades.homepage')}}">Home</a>
-                    <a href="">Adicionar</a>
-                    <a href="">Atualizar</a>
-                    <a href="">Eliminar</a>
-                    <a href="">Fotos</a>
+                    <a href="{{  url_for('cidades.homepage') }}">Home</a>
+                    <a href="adicionar.php">Adicionar</a>
+                    <a href="atualizar.php">Atualizar</a>
+                    <a href="eliminar.php">Eliminar</a>
+                    <a href="ad_fotos.php">Fotos</a>
                 </nav>
 
                 <form name="formPesquisa" action="pesquisa.php" method="GET" enctype="application/x-www-form-urlencoded" action="">
@@ -40,25 +38,17 @@
                     <input type="submit" value="pesquisa">
                 </form>
             </div>
+
+            {% block intro %}
+            {% endblock %}
             
-            <p id="p_01">
-                Um homem precisa viajar. Por sua conta, não por meio de histórias, imagens, livros ou TV. Precisa viajar por si, com seus olhos e pés, para entender o que é seu. Para um dia plantar as suas próprias árvores e dar-lhes valor. Conhecer o frio para desfrutar o calor. E o oposto. Sentir a distância e o desabrigo para estar bem sob o próprio teto.
-                Um homem precisa viajar para lugares que não conhece para quebrar essa arrogância que nos faz ver o mundo como o imaginamos, e não simplesmente como é ou pode ser. Que nos faz professores e doutores do que não vimos, quando deveríamos ser alunos, e simplesmente ir ver.
-            </p>
-            <p id="p_autor_01">Amyr Klink</p>
-            <p id="p_titulo_01">Cidades aderentes:</p>
             
-            <div class="cxFlex100">
-                {% block content %}
-                <!-- <p class="tit1"> Cidades aderentes </p>
-                <p class="signature">Amyr Klink</p> -->
-                
-                {% endblock %}
-            </div>
+            {% block content %}
+            {% endblock %}
+
         </main> <!-- fim da cxsite -->
         <footer>
-            <p>danielly toledo - IEFP projeto :: python backend</p>
+            <p>O Projeto Camalheia é exclusivamente patrocinado por Durex Lda, Harmony SA e Control Lda</p>
         </footer>
 	</body>
 </html>
-
