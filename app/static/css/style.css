@@ -26,7 +26,7 @@ a{
 }
 body{
     margin:0;
-    background-image:url("../img/fundos/city01.jpg");
+    background-image:url("../img/benagil.JPG");
     background-size: cover;
     /* 1 DE 2 - PARA MANTER O FOOTER NO FUNDO */
     display: flex;
