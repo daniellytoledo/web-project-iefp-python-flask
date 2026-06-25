@@ -22,3 +22,5 @@ def add_cidade():
         dataf      = request.form.get("fdataf")
         habitantes = request.form.get("fhabitantes")
         desc       = request.form.get("fdesc")
+    elif request.method == "GET":
+        return 

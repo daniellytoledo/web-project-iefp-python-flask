@@ -31,5 +31,16 @@ def select_imagens_cidade(cidade_id):
 
     return(resultado)
 
+def insert_into_cidades(id, nome, dataf, pais, habitantes, desc):
+    conexao = conectar_pymysql()
+    cursor = conexao.cursor()
+
+    try:
+        sql = "INSERT INTO cidades (id_c, nome_c, dataf_c, habitantes_c, desc_c) VALUES (?,?,?,?,?)"
+        cursor.execute(sql, (id, nome, dataf, pais, habitantes, desc))
+        cursor.commit()
+    except Exception as e:
+        print()
+
 if __name__ == "__main__":
     pprint(select_imagens_cidade(1)) # teste pra ver se está funcionando, escolhendo uma id de cidades
