@@ -25,7 +25,7 @@ def select_imagens_cidade(cidade_id):
     conexao = conectar_pymysql()
     cursor = conexao.cursor()
 
-    sql = "SELECT img_f FROM fotos WHERE cidade_f = %s"
+    sql = "SELECT img_f, id_f FROM fotos WHERE cidade_f = %s"
     cursor.execute(sql, (cidade_id))
     resultado = cursor.fetchall()
 

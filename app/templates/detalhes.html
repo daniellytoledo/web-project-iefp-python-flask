@@ -12,19 +12,31 @@
 <div>
     <p>
         <strong>País:</strong> 
-        {{ dados.pais_c }}
+        {{ dados.0.pais_c }}
     </p>
     <p>
         <strong>Habitantes:</strong> 
-        {{ dados.habitantes_c }}
+        {{ dados.0.habitantes_c }}
     </p>
     <p>
         <strong>Fundação:</strong> 
-        {{ dados.dataf_c }}
+        {{ dados.0.dataf_c }}
     </p>
     <p>
-        {{ dados.desc_c }}
+        {{ dados.0.desc_c }}
     </p>
+
+<br><br>
+
+<div class="cxFlex100">
+    {% for foto in dados[1]: %}
+        {% set fotografia = foto.img_f %}
+        <div class="moldura">
+            <img src="{{ url_for('static', filename='img/cidades/' ~ fotografia) }}" class="miniatura">
+            <img src="imgs/cidades/{{ foto.img_f }}" class="miniatura">
+            <a href="el_fotos.php?id_foto={{ foto.id_f }}" class="eliminar-foto"> Eliminar </a>
+        </div>
+    {% endfor %}
 </div>
 
 {% endblock %}

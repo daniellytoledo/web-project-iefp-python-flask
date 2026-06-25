@@ -9,8 +9,10 @@ def detalhes_cidade(cidade_id):
     if int(dados['dataf_c']) < 0:
         ano = str(abs(dados['dataf_c'])) + " AC"
         dados['dataf_c'] = ano
+
     fotos = select_imagens_cidade(cidade_id)
     dados_finais = [dados, fotos]     
+
     return dados_finais
 
 if __name__ == "__main__":
