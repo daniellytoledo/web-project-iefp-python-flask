@@ -21,5 +21,15 @@ def select_cidade(cidade_id):
 
     return(resultado)
 
+def select_imagens_cidade(cidade_id):
+    conexao = conectar_pymysql()
+    cursor = conexao.cursor()
+
+    sql = "SELECT img_f FROM fotos WHERE cidade_f = %s"
+    cursor.execute(sql, (cidade_id))
+    resultado = cursor.fetchall()
+
+    return(resultado)
+
 if __name__ == "__main__":
-    pprint(select_cidade(1)) # teste pra ver se está funcionando, escolhendo uma id de cidades
+    pprint(select_imagens_cidade(1)) # teste pra ver se está funcionando, escolhendo uma id de cidades

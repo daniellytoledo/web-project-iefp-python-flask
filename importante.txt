@@ -6,5 +6,5 @@ cd \wamp64\www\web-project-iefp-python-flask\web-project-iefp-python-flask
 
 python run.py
 
-python -m models.rep_cidades # testar se está retornando as informações do banco de dados executando o if do rep_cidades no cmd
+python -m models.rep_cidades # testar se está retornando as informações do banco de dados executando o if do rep_cidades no cmd, mas mudando o pprint do rep_cidades pra função que quer testar
 
