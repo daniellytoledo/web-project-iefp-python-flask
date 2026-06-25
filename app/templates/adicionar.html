@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Camalheia - Adicionar cidade {% endblock %}
+
+{% block intro %}
+    <p id="p_titulo_01"> Adicionar cidade </p>
+{% endblock %}
+
+{% block content %}
+
+<br>
+
+<div>
+    <form method="POST" action="">
+        <input type="text" name="fnome" placeholder="Nome da Cidade" class="class-input"><br><br>
+        <input type="text" name="fpais" placeholder="Nome do País" class="class-input"><br><br>
+        <input type="number" name="fdata" placeholder="Data de Fundação" class="class-input"><br><br>
+        <input type="number" name="fhabitantes" placeholder="Número de Habitantes" class="class-input"><br><br>
+        <textarea name="fdescricao" placeholder="Decrição" class="class-input"></textarea><br><br>
+        <input type="submit" value="Adicionar">
+        <input type="reset" value="Apagar">
+    </form>
+    <br><br>
+</div>
+
+{% endblock %}
