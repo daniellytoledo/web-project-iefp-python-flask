@@ -33,6 +33,18 @@
                     <a href="">Fotos</a>
                 </nav>
 
+                {% with messages = get_flashed_massages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash">
+                            {% for categoria, mensagem in messages %}
+                                <div class="{{ categoria }}">
+                                    {{ mensagem }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+
                 <form name="formPesquisa" action="pesquisa.php" method="GET" enctype="application/x-www-form-urlencoded" action="">
                     <input type="text" name="fpesquisa" class="input-pesquisa">
                     <input type="submit" value="pesquisa">
@@ -48,7 +60,7 @@
 
         </main> <!-- fim da cxsite -->
         <footer>
-            <p>O Projeto Camalheia é exclusivamente patrocinado por Durex Lda, Harmony SA e Control Lda</p>
+            <p>Projeto Python - IEFP || danielly toledo</p>
         </footer>
 	</body>
 </html>

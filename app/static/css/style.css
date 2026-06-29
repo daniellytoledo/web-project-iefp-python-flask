@@ -282,3 +282,25 @@ input[type="number"]{
     font-size: 0.9rem;
 }
 
+.flash {
+    width: 100%;
+    background-color: var(--bege_01);
+    padding: 8px;
+    margin: 30px 0;
+}
+
+.flash div {
+    padding: 10px;
+}
+
+.flashSucesso {
+    background-color: lightgreen;
+    color: #000;
+    border-radius: 3px;
+}
+
+.flashSucesso {
+    background-color: lightcoral;
+    color: #000;
+    border-radius: 3px;
+}
