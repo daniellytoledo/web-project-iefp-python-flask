@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from app.services.srv_cidades import lista_cidades, detalhes_cidade
+from app.services.srv_cidades import lista_cidades, detalhes_cidade, adicionar_cidade
 
 # cidades = Blueprint('cidades'), __name__, url_prefix="/cidades")
 cidades = Blueprint('cidades', __name__)
@@ -22,5 +22,8 @@ def add_cidade():
         dataf      = request.form.get("fdataf")
         habitantes = request.form.get("fhabitantes")
         desc       = request.form.get("fdesc")
+
+        cidade_nova = adicionar_cidade(nome, dataf, pais, habitantes, desc)
+    
     elif request.method == "GET":
-        return 
+        return render_template("adicionar.html")

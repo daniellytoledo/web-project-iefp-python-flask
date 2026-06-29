@@ -36,13 +36,13 @@ def insert_into_cidades(id, nome, dataf, pais, habitantes, desc):
     cursor = conexao.cursor()
 
     try:
-        sql = "INSERT INTO cidades (id_c, nome_c, dataf_c, habitantes_c, desc_c) VALUES (?,?,?,?,?)"
+        sql = "INSERT INTO cidades (id_c, nome_c, dataf_c, habitantes_c, desc_c) VALUES (%, %, %, %, %)"
         cursor.execute(sql, (id, nome, dataf, pais, habitantes, desc))
-        cursor.commit()
+        conexao.commit()
         return True
     except Exception as e:
         print(e)
-        cursor.rollback()
+        conexao.rollback()
         return False
 
 if __name__ == "__main__":

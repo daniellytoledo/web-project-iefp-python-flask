@@ -1,4 +1,4 @@
-from app.models.rep_cidades import select_todas_cidades, select_cidade, select_imagens_cidade, insert_into_cidade
+from app.models.rep_cidades import select_todas_cidades, select_cidade, select_imagens_cidade, insert_into_cidades
 from pprint import pprint
 
 def lista_cidades():
@@ -16,7 +16,7 @@ def detalhes_cidade(cidade_id):
     return dados_finais
 
 def adicionar_cidade(nome, dataf, pais, habitantes, desc):
-    return insert_into_cidade(nome, dataf, pais, habitantes, desc)
+    return insert_into_cidades(nome, dataf, pais, habitantes, desc)
 
 if __name__ == "__main__":
     pprint(detalhes_cidade(1))

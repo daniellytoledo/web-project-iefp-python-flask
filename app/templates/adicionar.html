@@ -11,7 +11,7 @@
 <br>
 
 <div>
-    <form method="POST" action=" {{ url_for(cidades.add_cidade) }} ">
+    <form method="POST" action=" {{ url_for('cidades.add_cidade') }} ">
         <input type="text" name="fnome" placeholder="Nome da Cidade" class="class-input"><br><br>
         <input type="text" name="fpais" placeholder="Nome do País" class="class-input"><br><br>
         <input type="number" name="fdata" placeholder="Data de Fundação" class="class-input"><br><br>
