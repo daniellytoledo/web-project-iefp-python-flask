@@ -39,8 +39,11 @@ def insert_into_cidades(id, nome, dataf, pais, habitantes, desc):
         sql = "INSERT INTO cidades (id_c, nome_c, dataf_c, habitantes_c, desc_c) VALUES (?,?,?,?,?)"
         cursor.execute(sql, (id, nome, dataf, pais, habitantes, desc))
         cursor.commit()
+        return True
     except Exception as e:
-        print()
+        print(e)
+        cursor.rollback()
+        return False
 
 if __name__ == "__main__":
     pprint(select_imagens_cidade(1)) # teste pra ver se está funcionando, escolhendo uma id de cidades
